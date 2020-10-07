@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>演示界面</title>
+    <style>
+      @font-face{
+        font-family: "Raleway Thin";
+        src: url(resource/Raleway-Thin.ttf);
+      }
+      @font-face{
+        font-family: "Raleway Medium";
+        src: url(resource/Raleway-Medium.ttf);
+      }
+      @font-face{
+        font-family: "DIN Light";
+        src: url(resource/DIN-Light.otf);
+      }
+      @font-face{
+        font-family: "DIN Medium";
+        src: url(resource/DIN-Medium.otf);
+      }
+      html {
+        white-space:nowrap;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      header {
+        background: #121117;
+        height: 100%;
+        overflow: hidden;
+      }
+      .top-header{
+        width:100%;
+        position:fixed;
+        display: flex;
+        z-index:30;
+        -webkit-transition:.2s ease-in-out;
+        transition:.2s ease-in-out;
+      }
+      .top-header.fixed{
+        box-shadow:0 4px 6px rgba(0,0,0,0.6);
+        background:rgba(66,66,66,0.9)
+      }
+      .top-header.fixed .top-title{
+        visibility:visible;
+      }
+      .top-logo{
+        margin-left: 40px;
+        width: 120px;
+      }
+      .top-title{
+        visibility:hidden;
+        margin-right: 160px;
+        color: white;
+        text-align:center;
+        flex: 1;
+        font-size:30px;
+        white-space: nowrap;
+        transition:text-indent .4s ease-in-out
+      }
+      .header-bg{
+        position: static;
+        height: calc(100% - 110px);
+        margin-top: 65px;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        margin-bottom: 15px;
+        background-image: url(resource/stars-translucent.svg);
+        background-size: 1350px;
+      }
+      .center-title{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+      .circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(20px, -50%);
+        z-index: 1;
+        width: 314px;
+        height: 314px;
+        background-color: #C97640;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+      }
+      h1 {
+        position: absolute;
+        display: block;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: white;
+        font-size: 80px;
+        font-family: Raleway Thin;
+      }
+      button {
+        position: absolute;
+        bottom: 55px;
+        width: 300px;
+        height: 80px;
+        font-size: 24px;
+        font-family: DIN Medium;
+        letter-spacing: 4px;
+      }
+      main {
+        background: #FAE2D0;
+        padding: 15px;
+        height: 2000px;
+      }
+      .products-title{
+        width: 20%;
+        margin: 15px auto;
+        padding: 10px;
+        background-color: #000000;
+        border-width: 1px;
+        border-color: #ffffff;
+        border-style: solid;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+      }
+      .products-container{
+        margin-top: 100px;
+        margin-bottom: 40px;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product{
+        margin-left: 80px;
+        margin-right: 80px;
+        flex: 1;
+        max-width: 228px;
+      }
+      .product-img{
+        height: 128px;
+        width: 128px;
+        margin: 0 auto;
+      }
+      .product-text{
+        color: #000000;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Raleway Medium;
+        text-align: center;
+      }
+      .maintain{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        color: red;
+        text-align: center;
+      }
+      .andmore{
+        margin-top: 30px;
+        margin-bottom: 60px;
+        font-size: 44px;
+        font-family: Raleway Medium;
+        color: #000000;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header id='header'>
+      <div class="top-header" id='top-header'>
+        <div class="top-logo">
+          <img src="resource/qsc-logo-white.svg" alt="logo">
+        </div>
+        <div class="top-title">
+          QSC Tech
+        </div>
+      </div>
+      <div class="header-bg">
+        <h1>Hey,</h1>
+        <h1 class="center-title">We Are <em>QSCTech</em> &gt;w&lt;</h1>
+        <div class="circle"></div>
+        <button>JOIN US!</button>
+      </div>
+    </header>
+    <main>
+      <div class="products-title">
+        OUR PRODUCTS
+      </div>
+      <div class="products-container">
+        <div class="product">
+          <div class="product-img">
+            <img src="resource/box.png" alt="box" width="128">  
+          </div>
+          <div class="product-text">
+            Box
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-img">
+            <img src="resource/mobile.png" alt="mobile" width="128">
+          </div>
+          <div class="product-text">
+            Mobile
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-img">
+            <img src="resource/enroll.png" alt="enroll" width="128">
+          </div>
+          <div class="product-text">
+            Enroll
+          </div>
+        </div>
+      </div>
+      <div class="maintain">
+        <em>*:Mobile For Android目前正在维护中，对您造成的不便请您谅解~</em>
+      </div>
+      <div class="andmore">
+        And More..
+      </div>
+    </main>
+
+    <script>
+      window.onscroll = function(e){
+        function getScroll(){
+            return document.documentElement.scrollTop || document.body.scrollTop || 0;
+        }
+        var topHeader = document.getElementById('top-header');
+        let targetHeight = document.getElementById('header').clientHeight - topHeader.clientHeight;
+        if(getScroll() > targetHeight){
+          topHeader.className = "top-header fixed";
+        }else{
+          topHeader.className = "top-header";
+        }
+      };
+    </script>
+  </body>
+</html>
